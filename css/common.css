@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+}
+
+div, ul, li{
+    box-sizing: border-box;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.top{
+    height: 108px;
+    background: url("../img/top_nav_bg.png") repeat-x;
+}
+
+.sidebar{
+    float: left;
+    width: 338px;
+}
+
+.sidebar-list li{
+    background: url("../img/nav_bg.png") repeat-x;
+}
+
+.list-item{
+    height: 86px;
+    padding-top: 23px;
+}
+
+.list-content{
+    height: 39px;
+    margin-left: 5%;
+    padding-left: 38px;
+    font-size: 24px;
+    line-height: 39px;
+    color: #939393;
+    text-indent: 5%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.list-content:hover{
+    color: #43d5ca;
+}
+
+.train{
+    background-image: url("../img/Dashboard_icon.png");
+}
+.train:hover{
+    background-image: url("../img/Dashboard_icon_f.png");
+}
+
+.practice{
+    background-image: url("../img/Posts_icon.png");
+}
+.practice:hover{
+    background-image: url("../img/Posts_icon_f.png");
+}
+
+.server{
+    background-image: url("../img/Profile_icon.png");
+}
+.server:hover{
+    background-image: url("../img/Profile_icon_f.png");
+}
+
+.quality{
+    background-image: url("../img/Media_icon.png");
+}
+.quality:hover{
+    background-image: url("../img/Media_icon_f.png");
+}
+
+.analysis{
+    background-image: url("../img/Pages_icon.png");
+}
+.analysis:hover{
+    background-image: url("../img/Pages_icon_f.png");
+}
+
+.history{
+    background-image: url("../img/Comment_icon.png");
+}
+.history:hover{
+    background-image: url("../img/Comment_icon_f.png");
+}
+
+.edu{
+    background-image: url("../img/Forum_icon.png");
+}
+.edu:hover{
+    background-image: url("../img/Forum_icon_f.png");
+}
+
+.system{
+    background-image: url("../img/Topics_icon.png");
+}
+.system:hover{
+    background-image: url("../img/Topics_icon_f.png");
+}
+
+.content{
+    padding: 30px 22px 0 22px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.tittle{
+    padding-left: 20px;
+    height: 75px;
+    line-height: 75px;
+    background: url("../img/tittle_bg.png") repeat-x;
+    font-size: 26px;
+    color: #333;
+}
+
+.data-content{
+    padding-top: 38px;
+}
+
+.data{
+    padding: 0 4%;
+}
+
+.data-col{
+    height: 622px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.data-col div{
+    width: 43px;
+}
+
+.data1>.data1-top{
+    padding: 50% 0;
+    background-color: #a27bd2;
+}
+
+.data1>.data1-bottom{
+    background-color: #4e81bd;
+}
+
+.wenjiang .data1{
+    height: 95%;
+}
+
+.wenjiang .data1>.data1-top{
+    height: 45%;
+}
+
+.wenjiang .data1>.data1-bottom{
+    height: 55%;
+}
