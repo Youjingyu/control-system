@@ -107,7 +107,7 @@ li{
 }
 
 .content{
-    padding: 30px 22px 0 22px;
+    padding: 30px 1% 0 1%;
     background-color: #eee;
     overflow: hidden;
 }
@@ -123,40 +123,104 @@ li{
 
 .data-content{
     padding-top: 38px;
+    background-color: #fff;
 }
 
 .data{
     padding: 0 4%;
 }
 
+.data>div{
+    width: 13%;
+}
+
 .data-col{
+    position: relative;
     height: 622px;
     color: #fff;
     text-align: center;
     vertical-align: middle;
 }
 
-.data-col div{
-    width: 43px;
+.data-col>div{
+    position: absolute;
+    bottom: 0;
+    width: 22%;
+}
+
+.data-item{
+    position: relative;
+}
+
+.data-item>div{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.data2{
+    left: 39%;
+}
+
+.data3{
+    left: 78%;
 }
 
 .data1>.data1-top{
-    padding: 50% 0;
     background-color: #a27bd2;
 }
-
 .data1>.data1-bottom{
     background-color: #4e81bd;
+}
+
+.data1>.data-top{
+    background-color: #a27bd2;
+}
+.data1>.data-bottom{
+    background-color: #4e81bd;
+}
+
+.data2>.data-top{
+    background-color: #c1504c;
+}
+.data2>.data-bottom{
+    background-color: #f79746;
+}
+
+.data3>.data-top{
+    background-color: #9bbb58;
+}
+.data3>.data-bottom{
+    background-color: #567f00;
 }
 
 .wenjiang .data1{
     height: 95%;
 }
-
-.wenjiang .data1>.data1-top{
+.wenjiang .data2{
+    height: 75%;
+}
+.wenjiang .data3{
     height: 45%;
 }
 
-.wenjiang .data1>.data1-bottom{
+.wenjiang .data1>.data-top{
+    height: 45%;
+}
+.wenjiang .data1>.data-bottom{
     height: 55%;
+}
+
+.wenjiang .data2>.data-top{
+    height: 70%;
+}
+.wenjiang .data2>.data-bottom{
+    height: 30%;
+}
+
+.wenjiang .data3>.data-top{
+    height: 80%;
+}
+.wenjiang .data3>.data-bottom{
+    height: 20%;
 }
