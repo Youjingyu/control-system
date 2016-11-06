@@ -4,6 +4,7 @@ body{
 
 div, ul, li{
     box-sizing: border-box;
+    moz-box-sizing: border-box;
 }
 
 ul{
@@ -15,10 +16,62 @@ li{
     list-style: none;
 }
 
+.clear-fix:before,.clear-fix:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
 .top{
     height: 108px;
     background: url("../img/top_nav_bg.png") repeat-x;
 }
+
+.log{
+    float: left;
+    padding-top: 8px;
+    padding-left: 20px;
+}
+
+.user-info{
+    float: right;
+}
+
+.user-info>div{
+    float: right;
+}
+
+.uer-name{
+    margin-top: 40px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.user-title{
+    color: #898989;
+}
+
+.user-photo{
+    margin-top: 18px;
+    margin-right: 34px;
+    width: 64px;
+    height: 65px;
+}
+
+.user-icon{
+    margin-top: 34px;
+    margin-right: 46px;
+    width: 26px;
+    height: 26px;
+    background: url("../img/LogOut_icon.png") no-repeat;
+}
+
+.user-icon:hover{
+    background-image: url("../img/LogOut_icon_f.png");
+}
+
 
 .sidebar{
     float: left;
@@ -27,6 +80,10 @@ li{
 
 .sidebar-list li{
     background: url("../img/nav_bg.png") repeat-x;
+}
+
+.sidebar-list li:hover{
+    background-image: url("../img/nav_bg_f.png");
 }
 
 .list-item{
@@ -124,6 +181,7 @@ li{
 .data-content{
     padding-top: 38px;
     background-color: #fff;
+    border-bottom: 2px solid #ccc;
 }
 
 .data{
@@ -131,7 +189,14 @@ li{
 }
 
 .data>div{
-    width: 13%;
+    float: left;
+    position: relative;
+    margin-left: 13.33333333%;
+    width: 15%;
+}
+
+.data>.wenjiang{
+    margin-left: 0;
 }
 
 .data-col{
@@ -139,7 +204,7 @@ li{
     height: 622px;
     color: #fff;
     text-align: center;
-    vertical-align: middle;
+    word-break: break-all;
 }
 
 .data-col>div{
@@ -194,6 +259,7 @@ li{
     background-color: #567f00;
 }
 
+
 .wenjiang .data1{
     height: 95%;
 }
@@ -203,24 +269,171 @@ li{
 .wenjiang .data3{
     height: 45%;
 }
-
 .wenjiang .data1>.data-top{
     height: 45%;
 }
 .wenjiang .data1>.data-bottom{
     height: 55%;
 }
-
 .wenjiang .data2>.data-top{
     height: 70%;
 }
 .wenjiang .data2>.data-bottom{
     height: 30%;
 }
-
 .wenjiang .data3>.data-top{
     height: 80%;
 }
 .wenjiang .data3>.data-bottom{
     height: 20%;
+}
+
+
+.luojia .data1{
+    height: 62%;
+}
+.luojia .data2{
+    height: 68%;
+}
+.luojia .data3{
+    height: 83%;
+}
+.luojia .data1>.data-top{
+    height: 52%;
+}
+.luojia .data1>.data-bottom{
+    height: 48%;
+}
+.luojia .data2>.data-top{
+    height: 37%;
+}
+.luojia .data2>.data-bottom{
+    height: 63%;
+}
+.luojia .data3>.data-top{
+    height: 62.5%;
+}
+.luojia .data3>.data-bottom{
+    height: 37.5%;
+}
+
+
+.caotang .data1{
+    height: 100%;
+}
+.caotang .data2{
+    height: 80%;
+}
+.caotang .data3{
+    height: 90%;
+}
+.caotang .data1>.data-top{
+    height: 60%;
+}
+.caotang .data1>.data-bottom{
+    height: 40%;
+}
+.caotang .data2>.data-top{
+    height: 35%;
+}
+.caotang .data2>.data-bottom{
+    height: 65%;
+}
+.caotang .data3>.data-top{
+    height: 60%;
+}
+.caotang .data3>.data-bottom{
+    height: 40%;
+}
+
+
+.qingfeng .data1{
+    height: 40%;
+}
+.qingfeng .data2{
+    height: 95%;
+}
+.qingfeng .data3{
+    height: 40%;
+}
+.qingfeng .data1>.data-top{
+    height: 50%;
+}
+.qingfeng .data1>.data-bottom{
+    height: 50%;
+}
+.qingfeng .data2>.data-top{
+    height: 40%;
+}
+.qingfeng .data2>.data-bottom{
+    height: 60%;
+}
+.qingfeng .data3>.data-top{
+    height: 60%;
+}
+.qingfeng .data3>.data-bottom{
+    height: 40%;
+}
+
+.data-name{
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #4c4c4c;
+}
+
+@media screen and (max-width: 1300px) {
+    .data-name {
+        bottom: -66px;
+        font-size: 20px;
+    }
+}
+
+.real-data-name{
+    margin-top: 20px;
+    height: 65px;
+    line-height: 61px;
+    border-top: 2px dashed #eee;
+    border-bottom: 2px dashed #eee;
+}
+
+.data-legend{
+    min-height: 71px;
+    line-height: 71px;
+    font-size: 16px;
+    color: #4c4c4c;
+}
+
+.data-legend>div{
+    display: inline-block;
+    height: 20px;
+    margin-left: 3.5%;
+    padding-left: 36px;
+    line-height: 20px;
+    background-repeat: no-repeat;
+}
+
+/*.data-legend>div:first-child{
+    margin-left: 1.7%;
+}*/
+
+.used-room{
+    background-image: url("../img/test_1.png");
+}
+.avail-room{
+    background-image: url("../img/test_2.png");
+}
+.computer-room{
+    background-image: url("../img/test_3.png");
+}
+.avail-computer-room{
+    background-image: url("../img/test_4.png");
+}
+.media-room{
+    background-image: url("../img/test_5.png");
+}
+.avail-media-room{
+    background-image: url("../img/test_6.png");
 }

@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background-color: #15ab95;
+}
+
+div{
+    box-sizing: border-box;
+    moz-box-sizing: border-box;
+}
+
+fieldset, input{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.content{
+    margin: 222px auto auto auto;
+    padding-top: 280px;
+    height: 576px;
+    background: url("../img/login_center_bg.png") no-repeat center;
+}
+
+form{
+    margin-left: 42.5%;
+    font-size: 20px;
+    color: #fff;
+}
+
+fieldset{
+    height: 29px;
+}
+
+label{
+    vertical-align: middle;
+}
+
+input{
+    height: 29px;
+    width: 169px;
+    font-size: 16px;
+    color: #fff;
+    text-indent: 5px;
+    background-image: url("../img/input_bg.png");
+}
+
+button{
+    width: 78px;
+    height: 29px;
+    background-image: url("../img/butten_bg.png");
+    border: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+.pass-fiel{
+    margin-top: 10px;
+}
+
+.foot{
+    display: table;
+    margin-left: 56.3%;
+    margin-top: 40px;
+    height: 25px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+}
+
+.foot span,.foot img{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+.foot-icon{
+    font-size: 12px;
+}
