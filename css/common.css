@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: "Microsoft YaHei","Arial","÷ÚÌו","ËÎÌו",sans-serif;
 }
 
 div, ul, li{
@@ -45,7 +46,6 @@ li{
     margin-top: 40px;
     margin-right: 20px;
     font-size: 20px;
-    font-weight: bold;
     color: #000;
 }
 
