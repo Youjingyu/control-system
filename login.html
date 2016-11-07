@@ -6,7 +6,7 @@
     <link href="css/login.css" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
+    <div class="content" id="content">
         <form>
             <fieldset>
                 <label>用户</label>
@@ -14,7 +14,7 @@
             </fieldset>
             <fieldset class="pass-fiel">
                 <label>密码</label>
-                <input>
+                <input type="password">
                 <button type="submit">登陆</button>
             </fieldset>
         </form>
@@ -22,8 +22,12 @@
             <span class="foot-icon">▶</span>
             <span>用户登陆</span>
             <img src="img/line.png">
-            <span>LOIN</span>
+            <span>LOGIN</span>
         </div>
     </div>
 </body>
+<script>
+    var margin_top = (screen.height-768)/2;
+    document.getElementById('content').setAttribute('style', 'margin-top:'+ margin_top +'px');
+</script>
 </html>

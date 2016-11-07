@@ -76,6 +76,7 @@ li{
 .sidebar{
     float: left;
     width: 338px;
+    background-color: #33363f;
 }
 
 .sidebar-list li{
