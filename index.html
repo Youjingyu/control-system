@@ -23,61 +23,66 @@
     <div class="main">
         <div class="sidebar" id="sidebar">
             <ul class="sidebar-list">
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content train">
                             培训运行监测
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content practice">
                             实训资源监测
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content server">
                             服务保障设施运行监测
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content quality">
                             质量监测
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content analysis">
                             监测分析
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content history">
                             历史数据查询
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content edu">
                             学历教育
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="first-menu">
                     <div class="list-item">
                         <div class="list-content system">
                             系统管理
                         </div>
                     </div>
+                    <ul class="second-menu hidden">
+                        <li>◆&nbsp;&nbsp;二级菜单</li>
+                        <li>◆&nbsp;&nbsp;二级菜单</li>
+                        <li>◆&nbsp;&nbsp;二级菜单</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -232,7 +237,53 @@
     </div>
 <script>
     var sidebar_height = document.getElementsByTagName('body')[0].clientHeight - 88;
-    document.getElementById('sidebar').setAttribute('style', 'height:' + sidebar_height + 'px');
+    var $sidebar = document.getElementById('sidebar')
+    $sidebar.setAttribute('style', 'height:' + sidebar_height + 'px');
+
+    function showSecondMenu(e){
+        var target = e.target || e.srcElement, cur_li;
+        while(!(target.id === 'sidebar')){
+            if(target.className === 'first-menu'){
+                cur_li = target;
+                ulToggle(target);
+                break;
+            } else {
+                target = target.parentNode;
+            }
+        }
+    }
+
+    function  ulToggle(ele){
+        var list = document.getElementById('sidebar').getElementsByTagName('ul'),
+            cur_ul = ele.getElementsByTagName('ul')[0];
+        for(var i = 0, len = list.length; i<len; i++){
+            if(cur_ul!==list[i]  && /^[ ]*second-menu[ ]*$/.test(list[i].className)){
+                list[i].className = 'second-menu hidden'
+            }
+        }
+
+        toggle(cur_ul);
+
+        function toggle(toggleUl){
+            var className = toggleUl.className;
+            if(/^hidden[ ]+|[ ]+hidden$|[ ]+hidden[ ]+]|hidden/.test(className)){
+                className = className.replace(/hidden/, '');
+            } else {
+                className = className + ' hidden'
+            }
+            toggleUl.setAttribute('class', className);
+        }
+    }
+
+    if ($sidebar.addEventListener) {                    //所有主流浏览器，除了 IE 8 及更早 IE版本
+        $sidebar.addEventListener("click", function(e){
+            showSecondMenu(e)
+        });
+    } else if ($sidebar.attachEvent) {                  // IE 8 及更早 IE 版本
+        $sidebar.attachEvent("onclick", function(e){
+            showSecondMenu(e)
+        });
+    }
 </script>
 </body>
 </html>
